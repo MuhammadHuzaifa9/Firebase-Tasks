@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizGrad Login</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./images/logo.png" alt="QuizGrad Logo">
+        </div>
+        <h2>SignUp!</h2>
+        <p>Welcome! Please Signup your account.</p>
+        <form class="login-form" id="loginform">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" value="hakeem@digital.com" minlength="6" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="6" required>
+            </div>
+            
+            <div class="buttons">
+                
+                <button class="signup-btn" id="signupbtn" >Signup</button>
+                <a class="login-btn" href="login.html" style="text-decoration: none;">Login</a>
+            </div>
+            <p class="login-with">Or login with</p>
+            <div class="social-login">
+                <a href="#" class="social-btn facebook">Facebook</a>
+                <a href="#" class="social-btn google">Google</a>
+            </div>
+        </form>
+    </div>
+    <script src="firebase.js" type="module"></script>
+    <script src="signup.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

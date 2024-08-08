@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: poppins;
+    src: url(./images/Poppins-Regular.ttf);
+    
+}
+@font-face {
+    font-family: roboto;
+    src: url(./images/Roboto-Regular.ttf);
+}
+body{
+ font-family: poppins;
+
+}
+#logoutbtn{
+    background-color: rgba(252, 200, 34, 1) !important;
+    text-decoration: none;
+    border: none;
+    height: 50px;
+    margin-top: 2%;
+    width: 100px;
+    
+
+}
+.brandlogo{
+    position: relative; 
+    font-size: larger !important;
+}
+.brandlogo  img{
+    position: absolute;
+    left: -8%;
+    top: 5px;
+    rotate: -17deg;
+}
+.headerr{
+   margin-left: 3%;
+   margin-right: 3%;
+   background-color: #fff;
+}
+.hitems{
+    flex-direction: row-reverse;
+  
+}
+#signupbtn{
+    border: 3px solid rgba(252, 200, 34, 1) !important ;
+    color: rgba(252, 200, 34, 1);
+    max-width: 100px ;
+    padding-left: 10px;
+}
+.items{
+    font-family: roboto;
+    font-weight: 500;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+}
+.items h1{
+    font-weight: bold;
+}
+#prep{
+    border-left: 3px solid black;
+    padding: 2%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: grey;
+    line-height: 15px;
+}
+#signupbtn2{
+    background-color: rgba(252, 200, 34, 1);    
+    color: #fff;
+    border: none;
+    padding: 3%;
+    line-height: 20px;
+}
+#knowmore{
+    background-color: #fff;
+    color: rgba(252, 200, 34, 1);
+    border: none;
+    padding: 1%;
+    line-height: 20px;
+    margin-left: 6%;
+
+}
+.ctn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6%;
+    gap: 25%;
+}
+.pic{
+    margin-top: -4%;
+   
+}
