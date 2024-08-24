@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSpot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form input[type="text"],
+        form input[type="file"],
+        form button {
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .blog-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            object-fit: cover;
+        }
+
+        .blog-card h2 {
+            font-size: 24px;
+            margin: 16px 0 8px;
+            color: #333;
+        }
+        /* #logout{
+            height: 40px;
+            font-size: medium;
+            margin-left: 10%;
+            border-radius: 10%;
+            background-color: #fff;
+            padding: 10px;
+            
+            font-weight: bold;
+        } */
+        .blog-card p {
+            font-size: 16px;
+            margin: 0 0 8px;
+            color: #555;
+        }
+
+        .blog-card a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card a:hover {
+            color: #004999;
+        }
+
+        .buttons {
+            align-self: flex-end;
+            margin-left: 25%;
+           
+        }
+        #upload {
+    display: inline;
+    width: 20%;
+}
+#loading {
+    width: 20%;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    display: none;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #007BFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+#progress-text {
+    position: relative;
+    z-index: 2;
+}
+#image {
+    width: 60%;
+}
+        .buttons a,
+        .buttons button {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons a:hover,
+        .buttons button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       BlogSpot 
+       <div class="buttons">
+           <a href="../dashboard/dashboard.html" style="font-size: 20px;border:1px dotted #fff;">Admin Dashboard</a>
+            <button id="logout">Logout</button>
+            
+        </div>
+    </header>
+
+    <center>
+        <form>
+            <input type="text" id="name" placeholder="Enter Name">
+            <input type="text" id="url" placeholder="Enter Description">
+            <div style="display: flex; justify-content: space-between;">
+                <input id="image" type="file">
+                <button id="loading">
+                    <div id="progress-bar"></div>
+                    <span id="progress-text"></span>
+                </button>
+                <button id="upload" type="button">Upload</button>
+            </div>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+
+       
+    </center>
+
+    <div class="main" id="maindiv">
+        <!-- Blog posts will be inserted here -->
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="./firebase.js"></script>
+</body>
+</html>
